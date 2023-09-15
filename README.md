@@ -18,11 +18,12 @@ sudo apt upgrade
 
 # Installing zsh
 sudo apt install zsh
-abrir nova aba Ubuntu
-Escolher opção 2
 
 # Makes zsh as shell default
 chsh -s $(which zsh)
+
+# abrir nova aba Ubuntu
+# Escolher opção 2
 
 # Installing curl
 sudo apt install curl
@@ -42,11 +43,16 @@ sudo apt install ruby-full
 sudo gem install colorls
 
 # Installing nvm (node version manager)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+
 # Installing NodeJS (LTS)
 nvm install --lts
 
-# Enable yarn
-corepack enable
+# Setup Clone
+git clone https://github.com/Camille846/myUbuntu.git ~/.dotfiles
+cd ~/.dotfiles
+ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/.p10k.zsh ~/.p10k.zsh
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
 
 ```
